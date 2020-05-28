@@ -4,6 +4,12 @@
 
 import turtle
 
+def draw_square(somez_turtle):
+    while i < 4:
+        somez_turtle.forward(100)
+        somez_turtle.right(90)
+        i += 1
+
 def draw_art():
     window = turtle.Screen()
     window.bgcolor('red')
@@ -15,14 +21,9 @@ def draw_art():
     brad.speed(2)
 
     n = 0
-    while n <360:
-        brad.right(10)
-        n += 10
-        i = 0
-        while i < 4:
-            brad.forward(100)
-            brad.right(90)
-            i += 1
+    for j in range(0,36):
+        draw_square(brad)
+        brad.rt(10)
 
     window.exitonclick()
 draw_art()
